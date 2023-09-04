@@ -1,0 +1,281 @@
+/* styles.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Helvetica, Arial, sans-serif, Geneva, Tahoma, sans-serif
+}
+
+/* Header styles */
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-family: Arial, Helvetica, sans-serif; /* Keep the original font for the logo */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Align the links vertically centered */
+}
+
+.nav-links li {
+    margin-right: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #3498db;
+    background-color: rgba(255, 254, 254, 0.966); /* Background color for the link */
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Background color on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
+/* Introduction styles */
+#intro {
+    background-color: #f2f2f2;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #ffffff;
+    color: #3498db;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hide by default on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f7f7f7;
+    margin: 3px 0;
+}
+
+/* Services styles */
+#services {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: rgba(33, 153, 228, 0.753); /* Match the navigation background color */
+}
+
+#services h2 {
+    color: #ffffff;
+}
+
+.services-content {
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.service-item {
+    flex-basis: calc(25% - 20px); /* Four items per row with spacing */
+    margin: 0 10px;
+    padding: 1rem;
+    border: 1px none #ccc;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-align: center;
+}
+
+.service-item a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    background-color: #3498db;
+    color: #ffffff; /* Switch foreground color to white on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-item:hover a {
+    color: #ffffff; /* Change link color to white on hover */
+}
+
+/* About Us styles */
+#about {
+    background-color: #f2f2f2;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.about-list {
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-item {
+    padding: 2rem; /* Increase padding for more spacing */
+    margin: 1rem; /* Increase margin for even more spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.about-item p {
+    margin-bottom: 1rem; /* Add space between the paragraphs */
+}
+
+.about-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    /* Adjust header and navigation styles for smaller screens */
+    header {
+        padding: 0.5rem 0;
+    }
+
+    /* Adjust navigation styles for smaller screens */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .hamburger {
+        display: flex; /* Display on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Adjust this value as needed */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex; /* Display when menu is active */
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+    /* Adjust intro and feature styles for smaller screens */
+    #intro {
+        padding: 2rem 0;
+    }
+
+    .intro-content {
+        max-width: 90%;
+    }
+
+    .cta-button {
+        margin-top: 1rem;
+    }
+
+    /* Adjust service styles for smaller screens */
+    #services {
+        padding: 1rem 0;
+    }
+
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+        margin: 0.2rem 2rem; /* Reduce the margin for services */
+    }
+
+    .service-item {
+        flex-basis: 90%;
+        margin: 0.5rem 0rem;
+    }
+
+    /* Adjust About Us styles for smaller screens */
+    #about {
+        padding: 2rem 0;
+    }
+
+    .about-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aobut-item {
+        flex-basis: 90%;
+        margin: 1rem 0;
+    }
+}
