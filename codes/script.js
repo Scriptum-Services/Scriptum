@@ -24,7 +24,7 @@ const button = document.getElementById('contact-button');
 
 function openWhatsApp() {
     let phoneNumber = "0203901038";
-        let message = `Welcome to Scriptum! Which Service will you like to patronize?`;
+        let message = `Good day. Please I will need your assistance.`;
         
         let url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
         
