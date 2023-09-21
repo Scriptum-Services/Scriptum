@@ -1,71 +1,255 @@
-/* Reset some default margin and padding for body and header */
-body, header {
+/* contact.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
-/* Center the heading and content in the contact section */
-#contact {
-    text-align: center;
-    padding: 50px;
-        background-color: #3498db; /* Optional: Add a background color for better visibility */
+/* Global styles */
+body {
+    font-family: Helvetica, Arial, sans-serif, Geneva, Tahoma, sans-serif;
 }
 
-/* Style the "Contact Us" heading */
-#contact h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+/* Header styles */
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem 0;
 }
 
-/* Style the contact information list */
-#paraphrasing-works ul {
-    list-style: none;
-    padding: 0;
-}
-
-/* Center the contact information list items */
-#paraphrasing-works ul li {
+nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-/* Add space between icons and contact information */
-#paraphrasing-works ul li i {
-    margin-right: 10px;
+.logo {
+    font-family: Arial, Helvetica, sans-serif; /* Keep the original font for the logo */
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-/* Style the navigation menu for mobile devices */
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Align the links vertically centered */
+}
+
+.nav-links li {
+    margin-right: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #3498db;
+    background-color: rgba(255, 254, 254, 0.966); /* Background color for the link */
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Background color on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hide by default on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f7f7f7;
+    margin: 3px 0;
+}
+
+/* Contact Us Page */
+#contact {
+    margin: auto 0;
+    padding: 1rem 0;
+    text-align: center;
+    background-image: linear-gradient(to right, #f2f2f2, #dfe6e9); /* Use a gradient background */
+}
+
+/* .contact-content {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0 2rem;
+    text-align: left;
+} */
+
+.contact-content h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.contact-content p {
+    color: #5a738e;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Paraphrasing Service section styles */
+#paraphrasing-works {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#contact-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+#contact-button:hover {
+    background-color: #2980b9;
+}
+
+#contact-list li {
+    margin-top: 1em;
+    font-size: 1.3rem;
+    color: #2980b9;
+    align-items: center;
+}
+
+/* .contact-form form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+} */
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Media queries for responsive design */
 @media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        position: relative;
+    /* Adjust header and navigation styles for smaller screens */
+    header {
+        padding: 0.5rem 0;
+    }
+
+    nav {
+        padding: 0 1rem; /* Reduce horizontal padding */
     }
 
     .hamburger {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        cursor: pointer;
+        display: flex; /* Display on smaller screens */
     }
 
     .nav-links {
-        display: none;
-        width: 100%;
-        background-color: #333;
+        display: none; /* Hide by default on smaller screens */
+        flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 7%; /* Adjust this value as needed */
         left: 0;
+        width: 100%;
+        background-color: #fff;
         text-align: center;
+        z-index: 1;
     }
 
-    .nav-links.show {
-        display: block;
+    .nav-links.active {
+        display: flex; /* Display when menu is active */
     }
 
     .nav-links li {
-        padding: 15px;
+        margin: 1rem 0;
+    }
+
+    
+    /* Contact Us Page */
+    #contact {
+        min-height: 10vh; /* Fill the entire viewport height */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Adjust to start content from the top */
+    }
+
+    .contact-content {
+        padding: 1rem; /* Add some padding for content */
+        width: auto;
+        max-width: 600px; /* Limit content width on small screens */
+    }
+
+    /* Adjust input styles to prevent overflow */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%; /* Make inputs expand to full width */
+        padding: 10px; /* Add padding for better readability */
+        box-sizing: border-box; /* Include padding and border in the width */
+        margin-bottom: 15px; /* Add some spacing between inputs */
+        max-width: 100%; /* Ensure inputs don't overflow their containers */
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1.5rem 0;
+        margin-top: auto; /* Push the footer to the bottom */
     }
 }
