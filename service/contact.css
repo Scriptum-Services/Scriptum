@@ -78,6 +78,32 @@ nav {
 
 /* Contact Us Page */
 #contact {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Center-align the "Click to Begin" button and the contact info */
+#paraphrasing-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-button {
+  margin-top: 20px;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+#contact {
     padding: 3rem 0;
     text-align: center;
     background-image: linear-gradient(to right, #f2f2f2, #dfe6e9); /* Use a gradient background */
