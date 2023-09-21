@@ -8,7 +8,7 @@ body, header {
 #contact {
     text-align: center;
     padding: 50px;
-    background-color: #f0f0f0; /* Optional: Add a background color for better visibility */
+        background-color: #3498db; /* Optional: Add a background color for better visibility */
 }
 
 /* Style the "Contact Us" heading */
