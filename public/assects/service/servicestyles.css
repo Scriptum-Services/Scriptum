@@ -1,0 +1,219 @@
+/* styles.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Helvetica, Arial, sans-serif, Geneva, Tahoma, sans-serif;
+}
+
+
+/* Header styles */
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-family: Arial, Helvetica, sans-serif; /* Keep the original font for the logo */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.service-item a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Align the links vertically centered */
+}
+
+.nav-links li {
+    margin-right: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #3498db;
+    background-color: rgba(255, 254, 254, 0.966); /* Background color for the link */
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Background color on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hide by default on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f7f7f7;
+    margin: 3px 0;
+}
+
+/* Services Page */
+#services {
+    padding: 1rem 0;
+    text-align: center;
+    background-color: rgba(33, 153, 228, 0.753);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.9em;
+}
+
+#services h2 {
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin-top: 2rem;
+}
+
+.service-item {
+    flex-basis: calc(33.33% - 20px);
+    margin: 9px 10px;
+    padding: 1.5rem;
+    border: 0px solid #ccc;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-align: center;
+}
+
+.service-item h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.service-item:hover h3, .service-item:hover a
+{
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    color: #000000;
+    line-height: 1.5;
+}
+
+.service-item:hover p {
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.service-item i {
+    color: #3498db;
+}
+
+.service-item:hover {
+    background-color: #3498db;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} 
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    /* Adjust header and navigation styles for smaller screens */
+    header {
+        padding: 0.5rem 0;
+    }
+
+    nav {
+        padding: 0 1rem; /* Reduce horizontal padding */
+    }
+
+    .hamburger {
+        display: flex; /* Display on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 7%; /* Adjust this value as needed */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex; /* Display when menu is active */
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    /* Services Page */
+    #services {
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .service-list {
+        flex-direction: column; /* Stack services in a column */
+        margin: 1rem 0; /* Adjust margin for services */
+    }
+
+    .service-item {
+        flex-basis: 100%; /* Take up full width on mobile screens */
+        margin: 1rem 2rem;
+        padding: 1rem;
+    }
+
+    /* Footer styles */
+    footer {
+        margin-top: auto; /* Push the footer to the bottom */
+        padding: 0.5rem 0;
+    }
+}
+
