@@ -1,4 +1,5 @@
 import React from "react";
+
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
@@ -16,7 +17,7 @@ function App() {
   return (
     <>
       <div>
-        <BrowserRouter>
+        <BrowserRouter basename="/Scriptum">
           <Header />
           <Routes>
             <Route path="/" element={<Homepage />} />
